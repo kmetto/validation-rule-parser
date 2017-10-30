@@ -1,6 +1,6 @@
 require("babel-register");
 const assert = require('chai').assert;
-const RulesParser = require('../index').default;
+const RulesParser = require('../index');
 
 describe("Validation rule parser", () => {
     it('presence', () => {
