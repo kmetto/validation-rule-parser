@@ -3,6 +3,10 @@ const assert = require('chai').assert;
 const RulesParser = require('../index');
 
 describe("Validation rule parser", () => {
+    it('empty string', () => {
+        const rules = new RulesParser('');
+        assert.deepEqual(rules.getCompiled(), {});
+    });
     it('presence', () => {
         const rules = new RulesParser('presence');
         assert.deepEqual(rules.getCompiled(), { presence: true });

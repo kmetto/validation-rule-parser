@@ -11,6 +11,9 @@ class RulesParser {
     }
 
     compileRules() {
+        if(this.rulesStr.length === 0){
+            return;
+        }
         const rawRules = this.rulesStr.split('|');
         if (rawRules.length > 0) {
             this.parseRules(rawRules);

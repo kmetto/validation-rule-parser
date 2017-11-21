@@ -109,6 +109,9 @@ var RulesParser = function () {
     _createClass(RulesParser, [{
         key: 'compileRules',
         value: function compileRules() {
+            if (this.rulesStr.length === 0) {
+                return;
+            }
             var rawRules = this.rulesStr.split('|');
             if (rawRules.length > 0) {
                 this.parseRules(rawRules);
